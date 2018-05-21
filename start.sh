@@ -4,7 +4,7 @@ set -x
 sock_pid_file=~/.socat_x11_sock_proxy
 
 get_ip() {
-    /sbin/ifconfig en0 inet | \
+    /sbin/ifconfig vboxnet0 | \
     /usr/bin/egrep -o '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})' | \
     /usr/bin/head -n 1
 }
